@@ -1,5 +1,18 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 100px;
   font-family: sans-serif;
+  background: #eee;
+}
+
+button {
+  margin-top: 30px !important;
+}
+
+.ui.header {
+  padding: 30px;
+}
+
+#counter {
+  padding: 50px;
 }
