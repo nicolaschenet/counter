@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import {
-  Button,
   Container,
-  Grid,
   Header,
-  Icon,
-  Image,
-  Progress,
-  Segment,
-  Statistic
+  Segment
 } from 'semantic-ui-react'
+
+import CandidatesList from './components/CandidatesList'
 
 class App extends Component {
   render() {
@@ -41,29 +37,7 @@ class App extends Component {
             </Header>
           </Segment>
           <Segment id='counter'>
-            <Grid columns={candidates.length} divided textAlign='center'>
-              {candidates.map(candidate => {
-                const { color, image, votes } = candidate
-                return (
-                  <Grid.Column>
-                    <Image src={candidate.image} size='small' shape='circular' centered />
-                    <Statistic size='huge' color={color}>
-                      <Statistic.Value>
-                        {votes}
-                      </Statistic.Value>
-                      <Statistic.Label>Votes</Statistic.Label>
-                    </Statistic>
-                    <Progress percent={33} progress color={color}/>
-                    <Button animated basic color={color}>
-                      <Button.Content visible>Vote</Button.Content>
-                      <Button.Content hidden>
-                        <Icon name='checkmark' />
-                      </Button.Content>
-                    </Button>
-                  </Grid.Column>
-                )
-              })}
-            </Grid>
+            <CandidatesList candidates={candidates} />
           </Segment>
         </Segment.Group>
       </Container>
