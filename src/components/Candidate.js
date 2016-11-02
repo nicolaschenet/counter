@@ -4,8 +4,13 @@ import { Button, Icon, Image, Grid, Progress, Statistic } from 'semantic-ui-reac
 
 class Candidate extends Component {
 
+  constructor(props) {
+    super(props)
+    this.vote = this.vote.bind(this)
+  }
+
   vote() {
-    alert('voted')
+    alert(`Voted for ${this.props.candidate.name}`)
   }
 
   render() {
