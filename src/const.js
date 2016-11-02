@@ -1,0 +1,3 @@
+export const VOTE_FOR_BEAN = 'VOTE_FOR_BEAN'
+export const VOTE_FOR_HILLARY = 'VOTE_FOR_HILLARY'
+export const VOTE_FOR_TRUMP = 'VOTE_FOR_TRUMP'
