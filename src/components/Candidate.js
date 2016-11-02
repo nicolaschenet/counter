@@ -26,7 +26,9 @@ class Candidate extends Component {
           <Statistic.Value>
             {`${votes}`}
           </Statistic.Value>
-          <Statistic.Label>Votes</Statistic.Label>
+          <Statistic.Label>
+            {`Vote${votes > 1 ? 's' : ''}`}
+          </Statistic.Label>
         </Statistic>
         <Progress percent={percent} progress color={color}/>
         <Button animated basic color={color} onClick={this.vote}>

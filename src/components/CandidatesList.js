@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { Grid } from 'semantic-ui-react'
 
-import Candidate from '../containers/Candidate'
+import VotableCandidate from '../containers/VotableCandidate'
 
 class CandidatesList extends Component {
   render() {
@@ -10,7 +10,7 @@ class CandidatesList extends Component {
     return (
       <Grid columns={candidates.length} divided textAlign='center'>
         {candidates.map(candidate =>
-          <Candidate key={candidate.name} candidate={candidate} />
+          <VotableCandidate key={candidate.name} candidate={candidate} />
         )}
       </Grid>
     )
