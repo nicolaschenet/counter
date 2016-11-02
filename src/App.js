@@ -12,18 +12,15 @@ class App extends Component {
     const candidates = [{
       name: 'hillary',
       image: 'http://i.imgur.com/KkzJL9O.jpg',
-      color: 'blue',
-      votes: 42
+      color: 'blue'
     }, {
       name: 'trump',
       image: 'http://afflictor.com/wp-content/uploads/2012/09/dt.jpg',
-      color: 'red',
-      votes: 42
+      color: 'red'
     }, {
       name: 'bean',
       image: 'http://lefauxrions.weebly.com/uploads/8/3/3/2/83320440/5de892c3-5637-4fcd-88d0-edaaab01063c-215-0000000240e3eb05.png',
-      color: 'teal',
-      votes: 42
+      color: 'teal'
     }]
     return (
       <Container textAlign='center'>

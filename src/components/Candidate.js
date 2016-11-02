@@ -10,21 +10,25 @@ class Candidate extends Component {
   }
 
   vote() {
-    alert(`Voted for ${this.props.candidate.name}`)
+    const { candidate, voteFor } = this.props
+    voteFor(candidate.name)
   }
 
   render() {
-    const { color, image, votes } = this.props.candidate
+    const { color, image, name } = this.props.candidate
+    const votes = this.props.vote[name]
+    const { total } = this.props.vote
+    const percent = total ? Math.round((votes / total) * 100) : total
     return (
       <Grid.Column>
         <Image src={image} size='small' shape='circular' centered />
         <Statistic size='huge' color={color}>
           <Statistic.Value>
-            {votes}
+            {`${votes}`}
           </Statistic.Value>
           <Statistic.Label>Votes</Statistic.Label>
         </Statistic>
-        <Progress percent={33} progress color={color}/>
+        <Progress percent={percent} progress color={color}/>
         <Button animated basic color={color} onClick={this.vote}>
           <Button.Content visible>Vote</Button.Content>
           <Button.Content hidden>

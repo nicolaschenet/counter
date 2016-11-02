@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { Grid } from 'semantic-ui-react'
 
-import Candidate from './Candidate'
+import Candidate from '../containers/Candidate'
 
 class CandidatesList extends Component {
   render() {
